@@ -2,6 +2,7 @@ import express from "express";
 import { requiresAuth } from "express-openid-connect";
 import { Document } from "../controller/document";
 import { upload } from "../config/multer";
+import { limiter } from "../config/ratelimit";
 
 const documentRoute = express.Router();
 documentRoute.use(express.json());
@@ -10,6 +11,7 @@ documentRoute.post(
   "/",
   requiresAuth(),
   upload.single("file"),
+  limiter,
   async (req, res) => {
     let user = req.oidc.user?.sub;
     let file = req.file;
