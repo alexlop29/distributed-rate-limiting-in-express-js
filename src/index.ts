@@ -19,26 +19,26 @@ app.get("/profile", requiresAuth(), (req, res) => {
 
 app.use("/documents", documentRoute);
 
-let server: http.Server
+let server: http.Server;
 
 const start = async () => {
   try {
-      client.on("error", (error) => console.error(`Redis Error: ${error}`));
-      await client.connect()
-      server = app.listen(EXPRESS_PORT, () => {
-        console.log(`Server is running on http://localhost:${EXPRESS_PORT}`);
-      });
+    client.on("error", (error) => console.error(`Redis Error: ${error}`));
+    await client.connect();
+    server = app.listen(EXPRESS_PORT, () => {
+      console.log(`Server is running on http://localhost:${EXPRESS_PORT}`);
+    });
   } catch (error) {
-      console.log(error)
+    console.log(error);
   }
-}
+};
 
-process.on('SIGTERM', () => {
-  console.log('SIGTERM signal received: closing HTTP server')
+process.on("SIGTERM", () => {
+  console.log("SIGTERM signal received: closing HTTP server");
   server.close(() => {
-    console.log('HTTP server closed')
-  })
+    console.log("HTTP server closed");
+  });
   client.disconnect();
-})
+});
 
-start()
+start();
