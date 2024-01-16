@@ -10,6 +10,8 @@
 - [express-openid-connect]
 - [eslint]
 - [express-rate-limit]
+- [rate-limit-redis]
+- [node-redis]
 
 [nodemon]
 [ts-node]
@@ -20,4 +22,14 @@ Types
   npm i --save-dev @types/multer
 
 
-remove .env from commit history!
+remove .env & node_modules from commit history!
+
+
+Resources:
+- https://github.com/redis/node-redis/blob/master/docs/client-configuration.md
+
+
+Review:
+- https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
+Express.js advanced topics and security best practices (e.g. cookies, etc.)
+Could make a good project
