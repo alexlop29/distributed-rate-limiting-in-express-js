@@ -40,3 +40,12 @@ Resources - Redis Express Best Practices
 - https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
 - https://redis.io/docs/connect/clients/nodejs/#learn-more
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+
+Encountered typescript-specific errors when using top-level awaits
+
+- https://github.com/TypeStrong/ts-node/issues/245#issuecomment-413019700
+- https://github.com/standard-things/esm/issues/580
+- https://www.alinalihassan.com/blog/top-level-await-typescript
+
+
+Working on resolving the issue of using top level awaits by updating tsconfig!
