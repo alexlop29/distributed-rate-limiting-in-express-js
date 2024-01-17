@@ -47,5 +47,4 @@ Encountered typescript-specific errors when using top-level awaits
 - https://github.com/standard-things/esm/issues/580
 - https://www.alinalihassan.com/blog/top-level-await-typescript
 
-
 Working on resolving the issue of using top level awaits by updating tsconfig!

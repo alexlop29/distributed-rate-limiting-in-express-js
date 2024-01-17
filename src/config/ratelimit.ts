@@ -1,17 +1,26 @@
 import { rateLimit } from "express-rate-limit";
 import { RedisStore } from "rate-limit-redis";
-import { client } from "../index";
+// import { client } from "./redis";
 
-console.log("right before limiter call / may not appear");
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  limit: 1,
-  standardHeaders: "draft-7",
-  legacyHeaders: false,
+const facilitateLimit = async (client: any) => {
+  console.log(`client in faciliatet limit: ${JSON.stringify(client)}`);
 
-  store: new RedisStore({
-    sendCommand: (...args: string[]) => client.sendCommand(args),
-  }),
-});
+  const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    limit: 1,
+    standardHeaders: "draft-7",
+    legacyHeaders: false,
 
-export { limiter };
+    store: new RedisStore({
+      sendCommand: (...args: string[]) => client.sendCommand(args),
+    }),
+  });
+
+  console.log(`limiter in faciliatet limit: ${limiter}`);
+
+  return limiter;
+};
+
+export { facilitateLimit };
+
+// export { limiter };
