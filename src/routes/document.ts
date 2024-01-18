@@ -24,7 +24,8 @@ documentRoute.post(
     try {
       await document.save();
       res.status(200).json({ Message: "OK" });
-    } catch {
+    } catch (error) {
+      console.log(error);// NOTE: (alopez) Improve error handling by tracking in Sentry.
       res.status(500).json({ Message: "Internal Server Error" });
     }
   },
