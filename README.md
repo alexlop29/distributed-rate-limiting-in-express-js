@@ -1,6 +1,9 @@
 ## About
-
 Demonstrates how to implement a distributed rate-limiting solution across multiple backend tasks using a Redis cache
+
+
+<img width="500" src="https://github.com/alexlop29/distributed-rate-limiting-in-express-js/assets/34544005/1658f81e-9058-4528-891a-62e2de4e1a25">
+
 
 ## 🏄 Getting Started
 
