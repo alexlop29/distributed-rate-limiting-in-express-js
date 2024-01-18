@@ -1,8 +1,6 @@
 ## About
 
-Demonstrates how to configure protected routes to enforce rate limting on distributed microservices
-
-// NOTE: Rename to distributed-rate-limiting-in-express-js
+Demonstrates how to implement a distributed rate-limiting solution across multiple backend tasks using a Redis cache
 
 ## 🏄 Getting Started
 
@@ -64,4 +62,5 @@ Suggestions:
 - Remove the use of the Math.random() function in the Document controller, merely used for demonstration purposes.
 - Remove synchronous functions, such as console.log(), and replace with an ehanced error handling solution, such as Sentry.
 - Apply security, performance, and stability best practices in an express.js application. 
+- Enhance tests.
 
