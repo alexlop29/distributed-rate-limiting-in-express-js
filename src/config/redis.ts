@@ -1,5 +1,5 @@
 import { RedisClientType, createClient } from "redis";
-import { REDIS_URL } from "./environment.js"; // testing quick switch over to es modules
+import { REDIS_URL } from "./environment.js";
 
 let client: RedisClientType;
 

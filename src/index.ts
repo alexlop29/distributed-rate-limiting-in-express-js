@@ -1,8 +1,3 @@
-/*
-Add note on the use of console.log(); Do not use in production - synchronous operation!
-Use Sentry.
-*/
-
 import express from "express";
 import { EXPRESS_PORT } from "./config/environment.js";
 import openidConnect from "express-openid-connect";

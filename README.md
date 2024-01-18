@@ -52,6 +52,16 @@ docker-compose up --build -d
 - [Design Patterns Explained – Dependency Injection with Code Examples](https://stackify.com/dependency-injection/)
 - [Dependency Injection - Stack Overflow](https://stackoverflow.com/questions/130794/what-is-dependency-injection)
 
-## 💡 Project Ideas
+## Disclaimer
+The scope of the project is limited to demonstrating how to implement
+a distributed rate limiting solution in a backend microservice. 
 
-- Demonstrate how to implement advanced security best practices in an express.js application
+There are several potential areas of improvement to get this demonstration
+production-ready.
+
+Suggestions:
+- Add a validation function to the Document controller.
+- Remove the use of the Math.random() function in the Document controller, merely used for demonstration purposes.
+- Remove synchronous functions, such as console.log(), and replace with an ehanced error handling solution, such as Sentry.
+- Apply security, performance, and stability best practices in an express.js application. 
+

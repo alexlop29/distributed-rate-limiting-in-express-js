@@ -1,9 +1,3 @@
-/*
-NOTE: (alopez) ${Math.random() * (100 - 50) + 50}
-Used to test the upload limiter.
-Add note on lack of file name validation. Outside the scope of this project
-*/
-
 import { s3 } from "../config/index.js";
 
 class Document {
