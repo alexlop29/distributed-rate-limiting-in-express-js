@@ -1,8 +1,10 @@
 import express from "express";
-import { EXPRESS_PORT } from "./config/environment";
-import { auth, requiresAuth } from "express-openid-connect";
-import { config } from "./config/auth";
-import { documentRoute } from "./routes/document";
+import { EXPRESS_PORT } from "./config/environment.js";
+import openidConnect from "express-openid-connect";
+import { config } from "./config/index.js";
+import { documentRoute } from "./routes/index.js";
+
+const { requiresAuth, auth } = openidConnect;
 
 const app = express();
 app.use(auth(config));

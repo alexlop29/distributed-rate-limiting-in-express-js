@@ -48,3 +48,21 @@ Encountered typescript-specific errors when using top-level awaits
 - https://www.alinalihassan.com/blog/top-level-await-typescript
 
 Working on resolving the issue of using top level awaits by updating tsconfig!
+
+Articles on CommonJs vs ECMA
+
+- https://blog.logrocket.com/commonjs-vs-es-modules-node-js/
+- https://blog.logrocket.com/how-to-use-ecmascript-modules-with-node-js/
+- https://blog.logrocket.com/typescript-4-7-ecmascript-module-support/
+
+- https://typescript.tv/hands-on/effortless-nodemon-setup-with-typescript-and-esm/
+- https://github.com/nodejs/node/issues/30213
+
+Bug: How to reference local file in ESM module when writing in TS?
+
+- https://stackoverflow.com/questions/73336396/how-to-reference-local-file-in-esm-module-when-writing-in-ts
+- https://stackoverflow.com/a/45934667/4518630
+
+`Error: ERR_UNSUPPORTED_DIR_IMPORT /opt/app/src/config /opt/app/src/index.ts`
+
+- https://stackoverflow.com/questions/64449464/error-err-unsupported-dir-import-directory-import-when-attempting-to-start-no

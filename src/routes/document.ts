@@ -1,11 +1,12 @@
 import express from "express";
-import { requiresAuth } from "express-openid-connect";
-import { Document } from "../controller/document";
-import { upload } from "../config/multer";
-import { limiter } from "../config/ratelimit";
+import openidConnect from "express-openid-connect";
+import { Document } from "../controller/index.js";
+import { upload, limiter } from "../config/index.js";
 
 const documentRoute = express.Router();
 documentRoute.use(express.json());
+
+const { requiresAuth } = openidConnect;
 
 documentRoute.post(
   "/",
@@ -21,7 +22,7 @@ documentRoute.post(
     }
     const document = new Document(user, file);
     try {
-      document.save();
+      await document.save();
       res.status(200).json({ Message: "OK" });
     } catch {
       res.status(500).json({ Message: "Internal Server Error" });

@@ -3,7 +3,7 @@ import {
   AUTH_CLIENT_ID,
   AUTH_BASE_URL,
   AUTH_SECRET,
-} from "./environment";
+} from "./environment.js";
 
 const config = {
   authRequired: false,
