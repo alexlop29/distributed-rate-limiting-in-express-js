@@ -1,68 +1,51 @@
-# rate-limiting-in-express-js
+## About
+Demonstrates how to configure protected routes to enforce rate limting on distributed microservices
 
-## Getting Started
 
-- [Node.js 20.11.0]()
-- [Typescript]
-- [dotenv]
-- [multer]
-- [aws-sdk]
-- [express-openid-connect]
-- [eslint]
-- [express-rate-limit]
-- [rate-limit-redis]
-- [node-redis]
+// NOTE: Rename to distributed-rate-limiting-in-express-js
+## 🏄 Getting Started
+```
+https://github.com/alexlop29/rate-limiting-in-express-js.git
+cd rate-limiting-in-express.js
+docker-compose up --build -d
+```
 
-[nodemon]
-[ts-node]
+### 🔧 Core libraries
+- [aws-sdk](https://www.npmjs.com/package/aws-sdk)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [express-openid-connect](https://github.com/auth0/express-openid-connect)
+- [express-rate-limit](https://express-rate-limit.mintlify.app/overview)
+- [express.js](https://expressjs.com)
+- [multer](https://github.com/expressjs/multer)
+- [rate-limit-redis](https://www.npmjs.com/package/rate-limit-redis)
+- [node-redis](https://github.com/redis/node-redis)
+- [Node.js 20.11.0](https://nodejs.org/en)
 
-Types
+### 💻 Development Libraries
+- [Docker](https://docs.docker.com)
+- [Docker Compose](https://docs.docker.com/get-started/08_using_compose/)
+- [Docker Desktop](https://docs.docker.com/desktop/)
+- [Docker - Node](https://hub.docker.com/_/node/)
+- [Docker - Redis](https://hub.docker.com/_/redis)
+- [eslint](https://eslint.org)
+- [nodemon](https://nodemon.io)
+- [Postman - VS Code](https://marketplace.visualstudio.com/items?itemName=Postman.postman-for-vscode)
+- [Prettier](https://prettier.io)
+- [ts-node](https://www.npmjs.com/package/ts-node)
+- [Typescript](https://www.typescriptlang.org)
 
-- npm i --save-dev @types/node (process.env)
-  npm i --save-dev @types/multer
+### 📛 Types
+- [@types/multer](https://www.npmjs.com/package/@types/multer)
+- [@types/node](https://www.npmjs.com/package/@types/node)
 
-remove .env & node_modules from commit history!
+## 📑 Additional Readings
+- [Node.js Redis - Docs](https://redis.io/docs/connect/clients/nodejs/#learn-more)
+- [Node.js Redis - createClient() Config Docs](https://github.com/redis/node-redis/blob/master/docs/client-configuration.md)
+- [Express.js Graceful Shutdown](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html)
+- [CommonJs & ESM](https://blog.logrocket.com/commonjs-vs-es-modules-node-js/)
+- [Design Patterns Explained – Dependency Injection with Code Examples](https://stackify.com/dependency-injection/)
+- [Dependency Injection - Stack Overflow](https://stackoverflow.com/questions/130794/what-is-dependency-injection)
 
-Resources:
+## 💡 Project Ideas
+- Demonstrate how to implement advanced security best practices in an express.js application
 
-- https://github.com/redis/node-redis/blob/master/docs/client-configuration.md
-
-Review:
-
-- https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
-  Express.js advanced topics and security best practices (e.g. cookies, etc.)
-  Could make a good project
-
-Resources - Redis Express Best Practices
-
-- https://dev.to/realsteveig/getting-started-with-caching-using-redis-and-typescript-2c4n
-- https://www.digitalocean.com/community/tutorials/how-to-implement-caching-in-node-js-using-redis
-- https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
-- https://redis.io/docs/connect/clients/nodejs/#learn-more
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
-
-Encountered typescript-specific errors when using top-level awaits
-
-- https://github.com/TypeStrong/ts-node/issues/245#issuecomment-413019700
-- https://github.com/standard-things/esm/issues/580
-- https://www.alinalihassan.com/blog/top-level-await-typescript
-
-Working on resolving the issue of using top level awaits by updating tsconfig!
-
-Articles on CommonJs vs ECMA
-
-- https://blog.logrocket.com/commonjs-vs-es-modules-node-js/
-- https://blog.logrocket.com/how-to-use-ecmascript-modules-with-node-js/
-- https://blog.logrocket.com/typescript-4-7-ecmascript-module-support/
-
-- https://typescript.tv/hands-on/effortless-nodemon-setup-with-typescript-and-esm/
-- https://github.com/nodejs/node/issues/30213
-
-Bug: How to reference local file in ESM module when writing in TS?
-
-- https://stackoverflow.com/questions/73336396/how-to-reference-local-file-in-esm-module-when-writing-in-ts
-- https://stackoverflow.com/a/45934667/4518630
-
-`Error: ERR_UNSUPPORTED_DIR_IMPORT /opt/app/src/config /opt/app/src/index.ts`
-
-- https://stackoverflow.com/questions/64449464/error-err-unsupported-dir-import-directory-import-when-attempting-to-start-no
