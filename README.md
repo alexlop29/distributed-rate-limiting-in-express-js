@@ -1,9 +1,11 @@
 ## About
+
 Demonstrates how to configure protected routes to enforce rate limting on distributed microservices
 
-
 // NOTE: Rename to distributed-rate-limiting-in-express-js
+
 ## 🏄 Getting Started
+
 ```
 https://github.com/alexlop29/rate-limiting-in-express-js.git
 cd rate-limiting-in-express.js
@@ -11,6 +13,7 @@ docker-compose up --build -d
 ```
 
 ### 🔧 Core libraries
+
 - [aws-sdk](https://www.npmjs.com/package/aws-sdk)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [express-openid-connect](https://github.com/auth0/express-openid-connect)
@@ -22,6 +25,7 @@ docker-compose up --build -d
 - [Node.js 20.11.0](https://nodejs.org/en)
 
 ### 💻 Development Libraries
+
 - [Docker](https://docs.docker.com)
 - [Docker Compose](https://docs.docker.com/get-started/08_using_compose/)
 - [Docker Desktop](https://docs.docker.com/desktop/)
@@ -35,10 +39,12 @@ docker-compose up --build -d
 - [Typescript](https://www.typescriptlang.org)
 
 ### 📛 Types
+
 - [@types/multer](https://www.npmjs.com/package/@types/multer)
 - [@types/node](https://www.npmjs.com/package/@types/node)
 
 ## 📑 Additional Readings
+
 - [Node.js Redis - Docs](https://redis.io/docs/connect/clients/nodejs/#learn-more)
 - [Node.js Redis - createClient() Config Docs](https://github.com/redis/node-redis/blob/master/docs/client-configuration.md)
 - [Express.js Graceful Shutdown](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html)
@@ -47,5 +53,5 @@ docker-compose up --build -d
 - [Dependency Injection - Stack Overflow](https://stackoverflow.com/questions/130794/what-is-dependency-injection)
 
 ## 💡 Project Ideas
-- Demonstrate how to implement advanced security best practices in an express.js application
 
+- Demonstrate how to implement advanced security best practices in an express.js application

@@ -1,7 +1,12 @@
+/*
+NOTE: (alopez) ${Math.random() * (100 - 50) + 50}
+Used to test the upload limiter.
+Add note on lack of file name validation. Outside the scope of this project
+*/
+
 import { s3 } from "../config/index.js";
 
 class Document {
-
   constructor(
     private readonly user: string,
     private readonly file: Express.Multer.File,
@@ -11,7 +16,7 @@ class Document {
     try {
       let params = {
         Bucket: "us-east-1-documents-for-node-app",
-        Key: `${this.user}-${this.file.originalname}-${Math.random() * (100 - 50) + 50}`, // Arbitrary to allow multiple uplaods of the same doc for testing
+        Key: `${this.user}-${this.file.originalname}-${Math.random() * (100 - 50) + 50}`,
         Body: this.file.buffer,
       };
       await s3.upload(params).promise();

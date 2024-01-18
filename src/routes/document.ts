@@ -1,3 +1,8 @@
+/*
+Add note on the use of console.log(); Do not use in production - synchronous operation!
+Use Sentry.
+*/
+
 import express from "express";
 import openidConnect from "express-openid-connect";
 import { Document } from "../controller/index.js";
@@ -25,7 +30,7 @@ documentRoute.post(
       await document.save();
       res.status(200).json({ Message: "OK" });
     } catch (error) {
-      console.log(error);// NOTE: (alopez) Improve error handling by tracking in Sentry.
+      console.log(error);
       res.status(500).json({ Message: "Internal Server Error" });
     }
   },
